@@ -1,0 +1,76 @@
+body {
+  font: 100%/1.5 system-ui, sans-serif;
+  display: flex;
+  flex-flow: column;
+  max-width: 80em;
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 1em;
+}
+
+header {
+  display: flex;
+  align-items: baseline;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+#time-filter {
+  margin-left: auto; /* pushes the slider to the right */
+  display: flex;
+  flex-direction: column; /* puts time + (any time) below */
+  gap: 0.25em;
+}
+
+#time-display,
+#any-time {
+  display: block;  /* puts them on their own line */
+}
+
+#any-time {
+  color: #777;
+  font-style: italic;
+}
+
+#time-display,
+#any-time {
+  display: block;
+}
+
+#time-slider {
+  width: 350px;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 1rem;             
+  margin-block: 0.75rem; 
+  font-size: 0.9rem;
+  max-width: 600px;
+  margin-inline: auto;  
+}
+
+
+.legend-title {
+  font-weight: 600;
+}
+
+
+.legend > div {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;         
+}
+
+
+.legend > div::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;  
+  background: var(--color);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+}
